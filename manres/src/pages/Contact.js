@@ -14,7 +14,6 @@ function Contact() {
 					updates. You can do this by filling in the form below or contact me on
 					my socials.
 				</p>
-
 				<form
 					className={styles.contactForm}
 					action="https://formsubmit.co/a91fdbb25681a4f6a5934e8a93a4251c"

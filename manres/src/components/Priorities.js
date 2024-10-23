@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import styles from "../sass/components/popup.module.scss";
 import RiskContext from "../context/RiskContext";
 import DarkModeContext from "../context/DarkModeContext";
@@ -6,16 +6,23 @@ import DarkModeContext from "../context/DarkModeContext";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
 const Priorities = ({ prioritiesView }) => {
+
+	// useEffect(() => {
+	// 	ret
+	// 	console.log(prioritiesView);
+	// },[])
 	const { riskData, reorderDataRisk } = useContext(RiskContext);
 	const { darkMode } = useContext(DarkModeContext);
 
-	/* Drag & Drop Priorities */
+	// /* Drag & Drop Priorities */
 	const handleOnDragEnd = (result) => {
+		console.log("masuk handle");
 		if (!result.destination) return;
-		const items = Array.from(riskData);
-		const [reorderedItem] = items.splice(result.source.index, 1);
-		items.splice(result.destination.index, 0, reorderedItem);
-		reorderDataRisk(items);
+		console.log(riskData);
+		// const items = Array.from(riskData);
+		// const [reorderedItem] = items.splice(result.source.index, 1);
+		// items.splice(result.destination.index, 0, reorderedItem);
+		// reorderDataRisk(items);
 	};
 
 	return (

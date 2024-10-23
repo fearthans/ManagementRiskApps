@@ -47,7 +47,7 @@ function Dashboard() {
 	useEffect(() => {
 		window.localStorage.setItem("notes", JSON.stringify(notes));
 	}, [notes]);
-
+	 
 	/* Popup View (Add, Remove, Modify) */
 	const addView = () => {
 		setAdd((prevState) => !prevState);

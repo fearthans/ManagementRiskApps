@@ -20,6 +20,10 @@ const Add = ({ addView }) => {
 				<form
 					className={styles.addForm}
 					onSubmit={(e) => {
+						e.preventDefault(); // Mencegah link mengarahkan ke URL baru
+						console.log("event", e);
+						console.log("form Data: ", formData);
+						
 						addNewRisk(e, formData);
 						addView();
 					}}
